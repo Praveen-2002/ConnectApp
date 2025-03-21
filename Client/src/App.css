@@ -1,0 +1,30 @@
+.bg-muted {
+  /* background-color: hsl(240 3.7% 15.9%); */
+  background-color: gray;
+}
+
+.bg-primary {
+  background-color: gray;
+  /* background-color: hsl(0 0% 98%); */
+  /* color: hsl(240 3.7% 15.9%); */
+}
+
+/* .bg-card{
+  background-color: hsl(240 10% 3.9%);
+} */
+
+.container {
+  align-items: center;
+  margin: 1em;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
