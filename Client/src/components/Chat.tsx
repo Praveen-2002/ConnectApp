@@ -29,6 +29,13 @@ export default function Room() {
             console.log("user connected");
             socket.emit("userName", searchParameters.get("name"))
         })
+
+        socket.emit("check","msg");
+
+        socket.on("No-waiting",()=>{
+            setWaiting(false);
+            console.log("called")
+        })
         
     }, [])
 
