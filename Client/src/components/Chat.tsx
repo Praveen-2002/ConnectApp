@@ -29,6 +29,14 @@ export default function Room() {
             console.log("user connected");
             socket.emit("userName", searchParameters.get("name"))
         })
+
+        socket.emit("check","msg");
+
+        socket.on("No-waiting",()=>{
+            setWaiting(false);
+            console.log("called")
+        })
+        
     }, [])
 
     const toggleButton: Function = (e: any) => {
@@ -78,6 +86,11 @@ export default function Room() {
             setIsNewUser(true);
             setAddedUserName(name)
             console.log(name)
+        })
+
+        socket.on("userDisconneted",(msg: string)=>{
+            setWaiting(true);
+            console.log(msg)
         })
 
         console.log(messageStream);
